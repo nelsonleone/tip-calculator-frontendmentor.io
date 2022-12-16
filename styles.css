@@ -14,7 +14,7 @@
     --lightGrayish-Cyan: hsl(185, 41%, 84%);
     --veryLightGrayish-Cyan:hsl(189, 41%, 97%);
     --white:hsl(0, 0%, 100%);
-    --form-Fontsize:1.5rem;
+    --form-Fontsize:clamp(1.125rem, 0.545vw + 1.023rem, 1.5rem);
 }
 
 body{
@@ -82,7 +82,7 @@ main{
     margin:1em;
     border-radius: 30px;
     padding:1em;
-    max-width:340px;
+    max-width:320px;
 }
 
 .input-area{
@@ -105,7 +105,7 @@ main{
     background-color:var(--veryDark-Cyan);
     border-radius: 15px;
     padding-inline:1em;
-    padding:1em;
+    padding-block:1em;
     margin-top:1.5em;
     position: relative;
 }
@@ -129,13 +129,11 @@ main{
     font-size: 2rem;
 }
 .reset{
-    max-width:300px;
-    padding-inline:5em;
+    min-width:10em;
     background-color: var(--strong-Cyan);
     color:var(--veryDark-Cyan);
     display:block;
     margin-inline: auto;
-    text-align: center;
     font-size: 1.2rem;
     margin-block:1em .5em;
 }
@@ -154,7 +152,8 @@ main{
         overflow-x: hidden;
     }
     main{
-        max-width:800px;
+        max-width:100%;
+        width:820px;
         display:grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -167,7 +166,7 @@ main{
     }
     .input-area{
         margin-right:1.5em;
-        margin-top: 0;;
+        margin-top: 0;
     }
     .input-area div{
         margin-block:1em;
@@ -175,6 +174,8 @@ main{
     .output-area{
         margin:0;
         padding-bottom:0;
+        max-width:100%;
+        width:300px;
     }
     .output-area > div{
         margin-block:1em;
@@ -182,7 +183,9 @@ main{
     .reset{
         position: absolute;
         bottom:1em;
-        max-width:280px;
+        max-width:100%;
+        width:12.5em;
+        margin-inline:auto;
     }
     
 }
